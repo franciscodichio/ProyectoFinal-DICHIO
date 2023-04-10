@@ -1,0 +1,16 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h2>Formulario de lista de clientes </h2>
+
+<ul>
+{% for cliente in clienteLista %}
+<li>Nombre y apellido:{{cliente.nom_ape}}, CUIL/CUIT:{{cliente.cuil_t}}, Situación fiscal:{{cliente.sit_fis}}</li>
+{% endfor %}
+</ul>
+
+
+{% endblock contenidoQueCambia %}

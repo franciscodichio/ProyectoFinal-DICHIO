@@ -1,0 +1,21 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <form action="{% url 'OperacionesFormulario' %}" method="POST">{% csrf_token %}
+
+        <P>Banco: <input type="text" name="banco"></p>
+
+        <P>Sucursal: <input type="text" name="sucursal"></p>
+        
+        <P>Cbu: <input type="number" name= "cbu"></p>
+
+        <button type="submit"> Enviar </button>
+
+    </form>
+
+
+
+{% endblock contenidoQueCambia %}

@@ -1,0 +1,15 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <form action="/AppCoder/buscar/" method="GET">
+        
+        <input type"number" name="codigo", id="codigo">
+
+        <input type="submit" value"Buscar articulo">
+
+    </form>
+
+{% endblock contenidoQueCambia %}

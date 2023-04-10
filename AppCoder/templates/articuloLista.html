@@ -1,0 +1,17 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h2>Formulario de lista de artículos </h2>
+
+<ul>
+{% for articulo in articuloLista %}
+<li>Código:{{articulo.codigo}}, Descripcion:{{articulo.descripcion}}, Cantidad:{{articulo.cantidad}}</li>
+
+{% endfor %}
+</ul>
+
+
+{% endblock contenidoQueCambia %}

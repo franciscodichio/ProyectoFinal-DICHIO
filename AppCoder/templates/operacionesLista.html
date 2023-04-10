@@ -1,0 +1,16 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h2>Formulario de lista de operaciones </h2>
+
+<ul>
+{% for operaciones in operacionesLista %}
+<li>Nombre del banco:{{operaciones.banco}}, Sucursal:{{operaciones.sucursal}}, CBU:{{operaciones.cbu}}</li>
+{% endfor %}
+</ul>
+
+
+{% endblock contenidoQueCambia %}

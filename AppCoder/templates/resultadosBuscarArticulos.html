@@ -1,0 +1,21 @@
+{% extends 'padre.html'%}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<p>Estamos buscando el articulo con código:{{codigo}}</p>
+
+    {% if articulos %}
+
+        <ul>
+            {% for articulo in articulos %}
+
+                <li>Código:{{articulo.codigo}}, Descripcion:{{articulo.descripcion}}, Cantidad:{{articulo.cantidad}}</li>
+
+            {% endfor %}
+        </ul>
+    
+    {% endif %}
+
+{% endblock contenidoQueCambia %}

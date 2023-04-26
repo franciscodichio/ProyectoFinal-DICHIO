@@ -1,7 +1,7 @@
 Requisitos:
 1.Tener Python y django instalados.
-2.Ejecutar desde el directorio /Tercer_pre-entrega_Kontos/ el archivo:
-  /Tercer_pre-entrega_Kontos/> python manage.py 80
+2.Ejecutar desde el directorio /3er_pre-entrega_DICHIO/ el archivo:
+  /3er_pre-entrega_DICHIO/> python manage.py 80
   abrir la página: localhost/admin-> user:superuser, password:superuser
 			 localhost/-> página de inicio.
 3. 3 menues de listados de artículo, cliente y operaciónes.

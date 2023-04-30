@@ -103,6 +103,8 @@ def resultadosBuscarArticulos(request) -> HttpResponse:
     return render(request, "resultadosBuscarArticulos.html")
 
 
+from django.contrib.auth.forms import UserCreationForm
+
 def register(request):
     
     if request.method == 'POST':
@@ -117,7 +119,7 @@ def register(request):
     else:
         form = UserCreationForm()
         
-    return render(request, "AppCoder/registro.html", {"form":form})
+    return render(request, "registro.html", {"form":form})
 
 
 
@@ -152,5 +154,5 @@ def login_request(request):
 
     form = AuthenticationForm()
 
-    return render(request,"AppCoder/login.html", {'form':form} )
+    return render(request,"login.html", {'form':form} )
 

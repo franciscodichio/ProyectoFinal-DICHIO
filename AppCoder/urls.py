@@ -2,9 +2,12 @@
 from django.urls import path
 from AppCoder import views
 
+
 urlpatterns = [   
 
     path('', views.inicio, name="Inicio"),
+    path('login/', views.login_request, name='login'),
+    path('register/', views.register, name = 'Register'),
     path('ArticuloFormulario/',views.articuloFormulario, name="ArticuloFormulario"),
     path('ClienteFormulario/',views.clienteFormulario, name="ClienteFormulario"),
     path('OperacionesFormulario/',views.operacionesFormulario, name="OperacionesFormulario"),

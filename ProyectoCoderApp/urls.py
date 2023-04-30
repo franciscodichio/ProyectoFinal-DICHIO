@@ -17,9 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from AppCoder.views import inicio
 
-urlpatterns = [
+urlpatterns : list = [
     path('admin/', admin.site.urls),
-
+    path("accounts/", include("django.contrib.auth.urls")), 
     path('AppCoder/', include('AppCoder.urls')),
     path('', inicio)    
 ]

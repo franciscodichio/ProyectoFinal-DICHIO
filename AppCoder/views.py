@@ -7,6 +7,8 @@ from .models import Cliente
 from .models import Operaciones
 
 
+
+
 def inicio(request) -> HttpResponse:
     return render(request, "inicio.html")
 
@@ -99,3 +101,58 @@ def buscar(request) -> HttpResponse:
 
 def resultadosBuscarArticulos(request) -> HttpResponse:
     return render(request, "resultadosBuscarArticulos.html")
+
+
+from django.contrib.auth.forms import UserCreationForm
+
+def register(request):
+    
+    if request.method == 'POST':
+        
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            
+            username = form.cleaned_data['username']
+            form.save()
+            return render(request, "AppCoder/inicio.html", {"mensaje":"Usuario Creado :)"})
+        
+    else:
+        form = UserCreationForm()
+        
+    return render(request, "registro.html", {"form":form})
+
+
+
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login, logout, authenticate
+
+
+def login_request(request):
+
+    if request .method == "POST":
+        form = AuthenticationForm(request, data = request.POST)
+        
+        if form.is_valid():
+
+            usuario = form.cleaned_data.get('username')
+
+            contra = form.cleaned_data.get('password')
+
+            user = authenticate (username=usuario, password=contra)
+
+            
+            if user is not None:
+                login(request, user)
+
+                return render(request,"AppCoder/inicio.html", {"mensaje":f"Bienvenido {usuario}"} )
+
+            else:
+                return render(request, "Apploder/inicio.html", {"mensaje":"Error, datos incorrectos"} )
+
+        else:
+                return render(request,"AppCoder/inicio.html", {"mensaje":"Erorr, formulario erroneo"})
+
+    form = AuthenticationForm()
+
+    return render(request,"login.html", {'form':form} )
+

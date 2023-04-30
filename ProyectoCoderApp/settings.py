@@ -55,7 +55,8 @@ ROOT_URLCONF : str = 'ProyectoCoderApp.urls'
 TEMPLATES : list = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
+        'DIRS': [r"C:\Users\Luciana\Desktop\proyecto final\ProyectoFinalDichio\3er_pre-entrega_DICHIO\AppCoder\templates"],
+        # 'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

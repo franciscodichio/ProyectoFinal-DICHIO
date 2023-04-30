@@ -3,7 +3,9 @@
 {% load static %}
 
 {% block contenidoQueCambia %}
-
+<center><img src="/static/assets/img/client.png" 
+    width="100" 
+    height="100" /></center>
     <form action="{% url 'ClienteFormulario' %}" method="POST">{% csrf_token %}
 
         <P>nom_ape: <input type="text" name="nom_ape"></p>

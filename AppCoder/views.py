@@ -6,6 +6,9 @@ from .models import Articulo
 from .models import Cliente
 from .models import Operaciones
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 
 
@@ -113,6 +116,7 @@ def register(request):
         if form.is_valid():
             
             username = form.cleaned_data['username']
+            messages.success(request, f'Usuario {username} creado correctamente')
             form.save()
             return render(request, "AppCoder/inicio.html", {"mensaje":"Usuario Creado :)"})
         
@@ -156,3 +160,9 @@ def login_request(request):
 
     return render(request,"login.html", {'form':form} )
 
+
+
+
+
+
+    

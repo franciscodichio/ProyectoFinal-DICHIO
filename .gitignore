@@ -55,9 +55,12 @@ cover/
 *.mo
 *.pot
 
+<<<<<<< HEAD
 env 
 ./env
 
+=======
+>>>>>>> fe0af0f4656820ffc24319737d0c4289cccdda91
 # Django stuff:
 *.log
 local_settings.py
@@ -122,6 +125,17 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+<<<<<<< HEAD
+=======
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+>>>>>>> fe0af0f4656820ffc24319737d0c4289cccdda91
 
 # Spyder project settings
 .spyderproject

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Modo de uso:
 ```
 python -m venv env
@@ -28,3 +29,7 @@ python manage.py createsuperuser
 
 
 
+=======
+# ProyectoFinal-DICHIO
+Este es el repositorio de mi proyecto final en el curso de Python.
+>>>>>>> fe0af0f4656820ffc24319737d0c4289cccdda91
